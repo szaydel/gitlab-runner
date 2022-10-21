@@ -41,6 +41,13 @@ runner-bin-host:
 	$(MAKE) runner-bin BUILD_PLATFORMS="-osarch=$(OS)/$(ARCH)"
 	cp -f "out/binaries/$(NAME)-$(OS)-$(ARCH)" out/binaries/gitlab-runner
 
+runner-bin-illumos: OS := illumos
+runner-bin-illumos: ARCH := amd64
+runner-bin-illumos:
+	# Building $(NAME) in version $(VERSION) for host platform
+	$(MAKE) runner-bin BUILD_PLATFORMS="-osarch=$(OS)/$(ARCH)"
+	cp -f "out/binaries/$(NAME)-$(OS)-$(ARCH)" out/binaries/gitlab-runner
+
 runner-bin-linux: OS := 'linux'
 runner-bin-linux:
 	$(MAKE) runner-bin BUILD_PLATFORMS="-os=$(OS) $(BUILD_ARCHS)"

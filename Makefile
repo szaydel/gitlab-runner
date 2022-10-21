@@ -82,6 +82,7 @@ help:
 	# Development commands:
 	# make development_setup - setup needed environment for tests
 	# make runner-bin-host - build executable for your arch and OS
+	# make runner-bin-illumos - build executable for amd64 illumos
 	# make runner-and-helper-bin-host - build executable for your arch and OS, including docker dependencies
 	# make runner-and-helper-bin-linux - build executable for all supported architectures for linux OS, including docker dependencies
 	# make runner-and-helper-bin - build executable for all supported platforms, including docker dependencies
